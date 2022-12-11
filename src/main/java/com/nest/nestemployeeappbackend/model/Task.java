@@ -12,6 +12,7 @@ public class Task {
     @Id
     @GeneratedValue
     private int id;
+    private int empid;
     private String taskName;
     private String description;
     private String status;
@@ -19,8 +20,9 @@ public class Task {
     public Task() {
     }
 
-    public Task(int id, String taskName, String description, String status) {
+    public Task(int id, int empid, String taskName, String description, String status) {
         this.id = id;
+        this.empid = empid;
         this.taskName = taskName;
         this.description = description;
         this.status = status;
@@ -32,6 +34,14 @@ public class Task {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getEmpid() {
+        return empid;
+    }
+
+    public void setEmpid(int empid) {
+        this.empid = empid;
     }
 
     public String getTaskName() {

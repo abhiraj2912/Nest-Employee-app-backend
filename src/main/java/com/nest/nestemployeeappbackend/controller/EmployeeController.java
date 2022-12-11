@@ -23,6 +23,12 @@ public class EmployeeController {
     }
 
     @CrossOrigin(origins = "*")
+    @PostMapping(path = "/login", consumes = "application/json", produces = "application/json")
+    public String login(){
+        return "Login";
+    }
+
+    @CrossOrigin(origins = "*")
     @PostMapping(path = "/empviewtask", consumes = "application/json", produces = "application/json")
     public String employeeViewTask(){
         return "employeeViewTask";
